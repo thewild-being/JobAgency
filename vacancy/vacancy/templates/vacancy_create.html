@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload your vacancies</title>
+</head>
+<body>
+
+    <h2>Upload your new vacancies </h2>
+    <!-- Devo solo metterci una form che richieda una description, che si colleghi al model! -->
+    <!-- No need per un fancy drag and drop -->
+    <form method="post" > {% csrf_token %}
+
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

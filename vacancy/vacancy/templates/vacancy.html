@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vacancies</title>
+</head>
+<body>
+    <h2>Vacancies</h2>
+    <!-- <form action ="/vacancies" method = "GET">{% csrf_token %} -->
+    {% for i in vacancy %}
+        <div>
+        {{ i.author.username }}: {{ i.description }}
+        </div>
+    {% endfor %}
+    <!-- </form> -->
+</body>
+</html>
+
