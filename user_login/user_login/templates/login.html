@@ -1,0 +1,10 @@
+{% block title %} Log into your account {% endblock %}
+
+{% block content %}
+    <form method = "GET" class = "">
+        {% csrf_token %}
+        <!-- ⛩ scrivi qualcosa dentro class -->
+        {{form}}
+        <button type="submit"> Sign up </button>
+    </form>
+{% endblock %}

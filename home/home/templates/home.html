@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Personal Profile {% endblock title %}</title>
+</head>
+
+<body>
+    <div id="content_profile">
+        {% block content_profile %} {% csrf_token %}
+
+            {% if authenticate and is_staff == True %}
+                <p> Access and edit your vacancies <a href="vacancy/new">Here</a></p>
+            {% elif authenticate and is_staff == False %}
+                <p> Upload, access and edit your Resume <a href="resume/new">Here</a></p>
+            {% endif %}
+
+        {% endblock content_profile %}
+    </div>
+</body>
+
+</html>

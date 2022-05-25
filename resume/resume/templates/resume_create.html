@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload a new Resume</title>
+</head>
+<body>
+    <h2>Upload a new Resume as .pdf</h2>
+    <!-- Devo solo metterci una form che richieda una description, che si colleghi al model! -->
+    <!-- No need per un fancy drag and drop -->
+    <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+
+        <div>
+            <input type="file" accept=".application/pdf">
+        </div>
+        <div>
+            <p> No files currently selected for upload </p>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+
+    </form>
+</body>
+</html>
