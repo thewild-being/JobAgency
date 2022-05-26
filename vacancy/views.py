@@ -18,3 +18,17 @@ def vacancy_view(request):
 # That's enough to create a new item.
 def vacancy_create(request):  # CRUD HERE
     return render(request, 'vacancy_create.html')  # returns the form for creating a resume --> POST http method
+
+
+# __________this is an alternative way to quickly create forms using the ready-to-use django forms
+class VacancyForm(ModelForm):
+    class Meta:
+        model = Vacancy
+        fields = "__all__"
+
+
+form = VacancyForm()
+
+
+def create_vacancy(request):
+    return render(request, form)
