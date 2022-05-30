@@ -16,8 +16,8 @@ def vacancy_view(request):
 
 # The main requirement is that the handlers should receive only one POST parameter: description.
 # That's enough to create a new item.
-def vacancy_create(request):  # CRUD HERE
-    return render(request, 'vacancy_create.html')  # returns the form for creating a resume --> POST http method
+"""def vacancy_create(request):  # CRUD HERE
+    return render(request, 'vacancy_create.html')"""  # returns the form for creating a resume --> POST http method
 
 
 # __________this is an alternative way to quickly create forms using the ready-to-use django forms
