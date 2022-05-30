@@ -10,8 +10,17 @@
     <h2>Upload your new vacancies </h2>
     <!-- Devo solo metterci una form che richieda una description, che si colleghi al model! -->
     <!-- No need per un fancy drag and drop -->
-    <form method="post" > {% csrf_token %}
+    <form method="post" enctype="multipart/form-data"> > {% csrf_token %}
 
+        <div>
+            <input type="file" >
+        </div>
+        <div>
+            <p> No files currently selected for upload </p>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
 
         <div>
             <button>Submit</button>
