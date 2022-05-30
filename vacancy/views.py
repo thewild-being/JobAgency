@@ -14,13 +14,7 @@ def vacancy_view(request):
     # poi per aggiornare vacancies, serve una nuova fx tipo questa per aggiornare un child block per la form
 
 
-# The main requirement is that the handlers should receive only one POST parameter: description.
-# That's enough to create a new item.
-"""def vacancy_create(request):  # CRUD HERE
-    return render(request, 'vacancy_create.html')"""  # returns the form for creating a resume --> POST http method
-
-
-# __________this is an alternative way to quickly create forms using the ready-to-use django forms
+# __________this is a way to quickly create forms using the ready-to-use django forms
 class VacancyForm(ModelForm):
     class Meta:
         model = Vacancy
